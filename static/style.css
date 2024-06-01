@@ -1,0 +1,327 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	background-color: #31775a;
+	font-family: 'Poppins', sans-serif;
+	padding: 0px 45px;
+	box-sizing: border-box;
+}
+
+nav {
+	width: 100%;
+	padding: 15px 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	margin-block: 20px;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style-type: none;
+	gap: 3rem;
+}
+
+ul li a {
+	text-decoration: none;
+	color: rgb(235, 235, 235);
+	font-weight: 200;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.logo h1 {
+	font-family: 'Stick No Bills', sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	color: rgb(235, 235, 235);
+}
+
+.container {
+	box-sizing: border-box;
+	background-color: rgba(217, 217, 217, 0.9);
+	border-radius: 20px;
+	padding-inline: 4rem;
+	padding-block: 4rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 45px;
+	align-items: center;
+}
+
+.instruction {
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.pemanis {
+	width: 30%;
+	height: 30%;
+}
+
+.deskripsi {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: #353535;
+}
+
+.deskripsi h3 {
+	font-size: 1.5rem;
+}
+
+.deskripsi h1 {
+	font-size: 3.2rem;
+}
+
+.deskripsi ol {
+	margin-left: 1.5rem;
+}
+
+.deskripsi li {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+.btn-coba {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.btn-coba a:last-child button {
+	background-color: #d9d9d9;
+	color: #2e6d53;
+	outline: solid 1px #2e6d53;
+}
+
+.btn-coba a:last-child button:hover {
+	background-color: #cccccc;
+}
+
+.btn-coba a button {
+	padding: 1rem 1.4rem;
+	border: none;
+	border-radius: 10px;
+	color: rgb(235, 235, 235);
+	font-weight: bold;
+	background-color: #31775a;
+	cursor: pointer;
+	font-size: 1.5rem;
+}
+
+.btn-coba a button:hover {
+	background-color: #2e6d53;
+}
+
+/* Sign Style */
+
+.container-sign {
+	background-color: rgba(217, 217, 217, 0.7);
+	border-radius: 20px;
+	padding: 32px 176px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 32px;
+}
+
+.container-sign .title h1 {
+	font-family: 'Stick No Bills', sans-serif;
+	font-size: 3.2rem;
+	font-weight: bold;
+	color: #151515;
+}
+
+a .back {
+	position: absolute;
+	top: 125px;
+	left: 224px;
+}
+
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 41px;
+	margin-bottom: 176px;
+}
+
+.file-input-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #d9d9d9;
+	border: 1px dashed #31775a;
+	width: 100%;
+	padding: 53px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.file-input-area input[type='file'] {
+	position: absolute;
+	width: 1022px;
+	height: 150px;
+	cursor: pointer;
+	opacity: 0;
+	font-size: 1.3rem;
+}
+
+.file-input-area button {
+	padding: 5px 10px;
+	background-color: #c5c5c5d5;
+	color: #31775a;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+}
+
+.private-key-section,
+.public-key-section {
+	width: 100%;
+	height: 67px;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	gap: 45px;
+}
+
+input {
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 10px;
+	background-color: rgba(217, 217, 217, 1);
+	font-size: 27px;
+	height: 67px;
+	padding-inline-start: 30px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+input[type='number'] {
+	width: 100%;
+	border-radius: 10px;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+	color: #31775a;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+	display: none;
+}
+
+.private-key-section button,
+.public-key-section button {
+	width: 285px;
+	font-size: 1.5rem;
+	padding: 0.8rem 1.2rem;
+	background-color: #31775a;
+	border-radius: 10px;
+	color: #d9d9d9;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	text-wrap: nowrap;
+}
+
+.private-key-section button:hover,
+.public-key-section button:hover {
+	background-color: #2e6d53;
+}
+
+::placeholder {
+	font-family: 'Poppins', sans-serif;
+	color: #31775a;
+}
+
+.btn-unduh {
+	text-align: center;
+	width: 100%;
+	height: 67px;
+	border: none;
+	border-radius: 10px;
+	background-color: #31775a;
+	font-size: 1.4rem;
+	color: #d9d9d9;
+	font-weight: bold;
+	cursor: pointer;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	-webkit-border-radius: ;
+	-moz-border-radius: ;
+	-ms-border-radius: ;
+	-o-border-radius: ;
+}
+
+.result input {
+	background-color: #cccccc;
+}
+
+.btn-unduh a:hover {
+	background-color: #2e6d53;
+}
+
+.ds-code {
+	width: 820px;
+}
+
+.private-key-section,
+.public-key-section {
+	overflow: hidden;
+}
+
+.private-key-section input,
+.public-key-section input {
+	visibility: hidden;
+}
+
+.private-key-section .private-key-input,
+.public-key-section .public-key-input {
+	background-color: #d9d9d9;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	text-wrap: nowrap;
+	color: #2e6d53;
+	font-size: 1.5rem;
+	padding: 1rem 1.8rem;
+	cursor: pointer;
+	border-radius: 8px;
+	-webkit-border-radius: ;
+	-moz-border-radius: ;
+	-ms-border-radius: ;
+	-o-border-radius: ;
+}
+
+#label-file {
+	color: #2e6d53;
+	font-size: 1.2rem;
+	margin-top: 1rem;
+}
+
+#label {
+	width: 100%;
+}

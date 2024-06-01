@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Tanda Tangan</title>
+          <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+               rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stick+No+Bills:wght@200..800&display=swap"
+               rel="stylesheet">
+     </head>
+
+     <body style="padding-block: 45px;">
+          <div class="container-sign">
+               <a href="/">
+                    <img class="back" src="{{url_for('static', filename='image 4.png')}}" alt="">
+               </a>
+               <div class="title">
+                    <h1>Tanda Tangan Dokumen</h1>
+               </div>
+               <form method="post" action="/sign" enctype="multipart/form-data">
+                    <div class="file-input-area">
+                         <img src="{{url_for('static', filename='image 2.png')}}" alt>
+                         <button>Choose File</button>
+                         <p id="label-file"></p>
+                         <input type="file" name="input-doc-file" id="input-doc-file" autocomplete="off" required>
+                    </div>
+                    <div class="private-key-section">
+                         <label for="private-key" id="private-key-label" class="private-key-input">
+                              <p id="label">Unggah kunci private dengan ekstensi (.pem)</p>
+                              <input type="file" name="private-key" id="private-key" required>
+                         </label>
+                         <button id="sign">Tanda Tangan</button>
+                    </div>
+                    <div class="result">
+                         <input type="number" name="result" id="result" readonly placeholder="{{result if result else "Result"}}">
+                    </div>
+
+                    <a class="btn-unduh" href="{{url_for('downloadFile', path=path) if result else '' }}" id="unduh-file" download>Unduh
+                         File</a>
+
+               </form>
+
+          </div>
+          <script>
+               const privateKeyLabel = document.getElementById( "private-key-label" )
+               const privateKeyFile = document.getElementById( "private-key" )
+               const inputDocFile = document.getElementById( "input-doc-file" )
+               const labelPem = document.getElementById( "label" )
+               const labelFile = document.getElementById( "label-file" )
+
+               inputDocFile.addEventListener( "change", ( e ) => {
+                    let fileName = e.currentTarget.files[ 0 ].name
+                    if ( fileName.length > 40 ) {
+                         labelFile.textContent = e.currentTarget.files[ 0 ].name.slice( 0, 40 ) + '..........'
+                    } else {
+                         labelFile.textContent = e.currentTarget.files[ 0 ].name
+                    }
+               } )
+
+               privateKeyFile.addEventListener( "change", ( e ) => {
+                    let fileName = e.currentTarget.files[ 0 ].name
+                    if ( fileName.length > 40 ) {
+                         labelPem.textContent = e.currentTarget.files[ 0 ].name.slice( 0, 40 ) + '..........'
+                    } else {
+                         labelPem.textContent = e.currentTarget.files[ 0 ].name
+                    }
+               } )
+          </script>
+     </body>
+
+</html>

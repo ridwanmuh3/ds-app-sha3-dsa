@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>DS-App</title>
+          <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+               rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stick+No+Bills:wght@200..800&display=swap"
+               rel="stylesheet">
+     </head>
+
+     <body>
+          <nav>
+               <div class="logo">
+                    <h1>DS-App</h1>
+               </div>
+               <div class="navigation">
+                    <ul>
+                         <li><a href="/">Home</a></li>
+                         <li><a href="/sign">Sign</a></li>
+                         <li><a href="/validasi">Validasi</a></li>
+                    </ul>
+               </div>
+          </nav>
+          <div class="container">
+               <div class="deskripsi">
+                    <div class="deskripsi1">
+                         <h3>Welcome👋</h3>
+                         <h1>Digital Signature - Jaga <br> Keaslian datamu
+                              Disini🔐</h1>
+                    </div>
+                    <p class="instruction">How To Use?📝 <br>
+                    <ol>
+                         <li>Tekan tombol bangkitkan kunci untuk mengenerate kunci private dan kunci public</li>
+                         <li>Klik Ayo Coba Sekarang atau klik
+                              button Sign diatas</li>
+                         <li>Isi semua inputan yang ada</li>
+                         <li>Klik Button Tanda Tangan </li>
+                         <li>Klik Unduh
+                              File</li>
+                    </ol>
+                    </p>
+                    <div class="btn-coba">
+                         <a href="/sign">
+                              <button>Ayo Coba Sekarang!</button>
+                         </a>
+                         <a href="/keys">
+                              <button>Bangkitkan Kunci</button>
+                         </a>
+                    </div>
+               </div>
+               <img class="pemanis" src="{{url_for('static',filename='Component 1.png')}}" alt>
+          </div>
+     </body>
+
+</html>
